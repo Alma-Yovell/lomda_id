@@ -1,0 +1,246 @@
+#collegeLogo {
+    position: absolute;
+    top: 2vh;
+    width: 7vw;
+    right: 1vw;
+}
+
+@font-face {
+    font-family: Karantina;
+    src: url("assets/fonts/Karantina-Regular.ttf");
+}
+
+body,
+html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    overflow: hidden;
+    font-family: "Karantina";
+    direction: rtl;
+    background-color: #f4f1de;
+}
+
+#title {
+    position: absolute;
+    top: 21vh;
+    right: 28vw;
+    font-size: 16vmin;
+    color: #3d405b;
+    z-index: 2;
+}
+
+#circle {
+    position: absolute;
+    top: 16vh;
+    right: 3vw;
+    background-color: #f9f7eb;
+    border-radius: 53%;
+    width: 94vw;
+    height: 60vh;
+    z-index: 1;
+}
+
+#fingerPrint {
+    position: absolute;
+    top: 44vh;
+    right: 34vw;
+    width: 31vw;
+    z-index: 2;
+}
+
+#line {
+    position: absolute;
+    top: 45vh;
+    right: 34.3vw;
+    border-top: 4px solid green;
+    border-bottom: none;
+    width: 30.5vw;
+    animation: upAndDown 2s linear;
+    z-index: 2;
+}
+
+@keyframes upAndDown {
+
+    0%,
+    100% {
+        top: 45vh;
+    }
+
+    50% {
+        top: 65vh;
+    }
+}
+
+#logo {
+    position: absolute;
+    top: 41vh;
+    right: 20vw;
+    width: 60vw;
+    z-index: 3;
+}
+
+#btn {
+    position: absolute;
+    top: 82vh;
+    right: 33vw;
+    width: 33vw;
+    height: 7vh;
+    font-size: 7vmin;
+    font-family: Karantina;
+    border-radius: 15px;
+    border: 2px solid #e89024;
+    color: #e89024;
+    cursor: pointer;
+    z-index: 2;
+}
+
+.animationShow {
+    animation: opacityUp 1s ease-in-out;
+}
+
+@keyframes opacityUp {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+        display: block;
+    }
+}
+
+#reception {
+    display: none;
+}
+
+.opacityChange {
+    animation: opChange 0.5s linear;
+}
+
+@keyframes opChange {
+    0% {
+        opacity: 1;
+        left: 17vw;
+        /* Add the original left position */
+    }
+
+    100% {
+        opacity: 0;
+        left: 17vw;
+        /* Add the original left position */
+    }
+}
+
+#register {
+    position: absolute;
+    top: 64vh;
+    right: 0vw;
+    width: 96vw;
+}
+
+#text-register {
+    position: absolute;
+    top: 31vh;
+    right: 9vw;
+    width: 81vw;
+    font-size: 8vmin;
+    text-align: center;
+}
+
+#arrow {
+    position: absolute;
+    top: 46vh;
+    width: 24vw;
+    cursor: pointer;
+}
+
+.animationLR {
+    animation: leftAndRight 1s linear infinite;
+
+}
+
+@keyframes leftAndRight {
+
+    0%,
+    100% {
+        right: 42vw;
+    }
+
+    50% {
+        right: 34vw;
+    }
+}
+
+.goDown {
+    animation: animationDown 2s linear;
+}
+
+
+@keyframes animationDown {
+
+    0% {
+        top: 12.5vh;
+
+    }
+
+    100% {
+        top: 100vh;
+    }
+
+    50% {
+        top: 50vw;
+    }
+}
+
+#hand-id {
+    display: none;
+}
+
+#handWithId {
+    position: absolute;
+    right: 3vw;
+    top: 24vh;
+    width: 91vw;
+}
+
+.opacityChange{
+    animation: opChange 1s linear;
+}
+
+@keyframes opChange {
+    0%
+    {
+        opacity: 0.2;
+    }
+    100% {
+        opacity: 1;
+    }
+    50% {
+        opacity: 0.5;
+    }
+}
+
+
+#text-id {
+    position: absolute;
+    top: 72vh;
+    right: 27vw;
+    width: 46vw;
+    font-size: 8vmin;
+    text-align: center;
+}
+
+#idDiv {
+    position: absolute;
+    top: 34vh;
+    right: 33vw;
+    width: 46vw;
+    height: 17vh;
+    border-radius: 36px;
+    background-color: transparent;
+}
+
+#main-page{
+    display: none;
+}

@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <script src="code.js" type="text/javascript"></script>
+    <title>ת.ז פקער</title>
+</head>
+
+<body>
+    <img id="collegeLogo" alt="collegeLogo" src="collegeLogo.png" />
+
+    <div id="open-screen">
+        <div id="title">תעודת זהות<br /> פיקוד העורף</div>
+        <div id="circle"></div>
+        <img id="fingerPrint" alt="fingerPrint" src="fingerPrint.png" />
+        <div id="line"></div>
+        <img id="logo" alt="logo" src="logo.png" />
+        <button id="btn"> התחלה לומדה </button>
+    </div>
+
+    <div id="reception">
+        <img id="register" alt="register" src="register.png" />
+        <div id="text-register">
+            בלומדה זו תצרו את תעודת הזהות של פיקוד העורף ותוך כדי
+            תלמדו מידע בסיסי וחשוב
+        </div>
+        <img id="arrow" class="animationLR" alt="arrow" src="arrow.png" />
+    </div>
+
+    <div id="hand-id">
+        <img id="handWithId" alt="handWithId" src="handWithId.png" />
+        <div id="text-id">
+            לחצו על התעודת זהות והתחילו ללמוד
+        </div>
+        <div id="idDiv"></div>
+    </div>
+
+    <div id="main-page">
+
+        <div id="navBarDiv">
+            <div id="navBar"></div>
+            <div id="container">
+                <!-- <div class="header" v-for="(name, index) in arrNavBar" :key="index" :id="`name${index}`">
+            {{ name }}
+        </div> -->
+                <div class="circle" v-for="index in 9" :key="`circle${index}`" :id="`circle${index}`"
+                    @mouseover="showHeader" @mouseout="hideHeader"></div>
+            </div>
+
+
+            <div id="idCard">
+                <div id="imgDiv"></div>
+                <div class="text " id="lastName"> <b>שם משפחה:</b> העורף </div>
+                <div class="text " id="firstName"> <b>שם פרטי:</b> פיקוד </div>
+                <div class="text" id="birthDate"> תאריך לידה: </div>
+                <div class="text" id="date"> תאריך הנפקה: </div>
+                <div class="text" id="expiration"> תוקף: </div>
+                <div id="numbers"> 0000000000000 </div>
+                <div id="idNumbers"> 000000000 </div>
+                <div id="chip"> </div>
+            </div>
+
+        </div>
+
+    </div>
+
+</body>
+
+</html>
