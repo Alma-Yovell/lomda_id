@@ -1,7 +1,7 @@
 #collegeLogo {
     position: absolute;
-    top: 2vh;
-    width: 7vw;
+    top: 1vh;
+    width: 15vw;
     right: 1vw;
 }
 
@@ -114,22 +114,9 @@ html {
     display: none;
 }
 
-.opacityChange {
-    animation: opChange 0.5s linear;
-}
-
-@keyframes opChange {
-    0% {
-        opacity: 1;
-        left: 17vw;
-        /* Add the original left position */
-    }
-
-    100% {
-        opacity: 0;
-        left: 17vw;
-        /* Add the original left position */
-    }
+#reception-div{
+    position: absolute;
+    left: 100vw;
 }
 
 #register {
@@ -172,24 +159,16 @@ html {
     }
 }
 
-.goDown {
-    animation: animationDown 2s linear;
+.goLeft {
+    animation: animationgoLeft 1s linear;
 }
 
-
-@keyframes animationDown {
-
+@keyframes animationgoLeft {
     0% {
-        top: 12.5vh;
-
+        left: 0;
     }
-
     100% {
-        top: 100vh;
-    }
-
-    50% {
-        top: 50vw;
+        left: -100%; 
     }
 }
 
@@ -204,18 +183,19 @@ html {
     width: 91vw;
 }
 
-.opacityChange{
+.opacityChange {
     animation: opChange 1s linear;
 }
 
 @keyframes opChange {
-    0%
-    {
+    0% {
         opacity: 0.2;
     }
+
     100% {
         opacity: 1;
     }
+
     50% {
         opacity: 0.5;
     }
@@ -241,6 +221,6 @@ html {
     background-color: transparent;
 }
 
-#main-page{
+#main-page {
     display: none;
 }

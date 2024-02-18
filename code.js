@@ -18,9 +18,16 @@ const openScreen = () => {
 
 const reception = () => {
     document.getElementById("arrow").addEventListener("click", () => {
-        document.getElementById("reception").style.display = "none";
-        document.getElementById("hand-id").style.display = "block";
-        handId();
+        // document.getElementById("arrow").classList.remove("animationLR");
+        document.getElementById("reception-div").classList.add("goLeft");
+
+        setTimeout(() => {
+            document.getElementById("reception").style.display = "none";
+            document.getElementById("hand-id").style.display = "block";
+            handId();
+        }, 1000);
+
+
     });
 }
 
