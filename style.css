@@ -1,3 +1,5 @@
+/* -----------------------open screen---------------------------------------------------------------- */
+
 #collegeLogo {
     position: absolute;
     top: 1vh;
@@ -110,12 +112,14 @@ html {
     }
 }
 
+/* ------------------------reception------------------------------------------------------------------------------------- */
+
 #reception {
     display: none;
-  
+
 }
 
-#reception-div{
+#reception-div {
     position: absolute;
     left: 100vw;
 }
@@ -168,10 +172,13 @@ html {
     0% {
         left: 0vw;
     }
+
     100% {
-        left: 2vw; 
+        left: 2vw;
     }
 }
+
+/* ------------------------hand-id------------------------------------------------------------------------------- */
 
 #hand-id {
     display: none;
@@ -226,18 +233,18 @@ html {
     display: none;
 }
 
-/* ------------------main page--------------------- */
+/* ------------------main page--------------------------------------------------------------------------- */
 
 #main-page {
     direction: rtl;
     height: 100vh;
     width: 100vw;
-    background-image: url('../assets/media/background.png');
+    background-image: url('background.png');
     background-size: 100% 100%;
     background-repeat: no-repeat;
 }
 
-#header{
+#header {
     position: absolute;
     top: 8vh;
     left: 23vw;
@@ -307,18 +314,16 @@ html {
 .text {
     font-size: 6vmin;
     position: absolute;
-    cursor: pointer;
 }
 
 #imgDiv {
     top: 9vh;
-    left: 52.2vw;
+    left: 51.1vw;
     width: 40vw;
     position: absolute;
     height: 25vh;
     background-color: #e6edf3;
     border-radius: 40px;
-    cursor: pointer;
     z-index: 2;
 }
 
@@ -359,7 +364,6 @@ html {
     text-align: center;
     font-size: 5vmin;
     padding-top: 2vh;
-    cursor: pointer;
 }
 
 #idNumbers {
@@ -368,7 +372,6 @@ html {
     left: 63vw;
     color: #cad0d6;
     font-size: 7vmin;
-    cursor: pointer;
 }
 
 #chip {
@@ -379,7 +382,6 @@ html {
     height: 8vh;
     background-color: #f1ede9;
     border-radius: 7px;
-    cursor: pointer;
 }
 
 .clickHere {
@@ -395,7 +397,117 @@ html {
     }
 
     50% {
-        transform: scale(1.08);
+        transform: scale(1.02);
         border: 3px solid rgb(247, 247, 155);
     }
+}
+
+/* -----------------------imgDiv-page---------------------------------------------- */
+
+#imgDiv-page {
+    display: none;
+}
+
+.shadow {
+    height: 100vh;
+    width: 100vw;
+    background-size: 100% 100%;
+    background-color: #00000082;
+    z-index: 1;
+    position: absolute;
+
+}
+
+#divInstructions {
+    position: absolute;
+    top: 21vh;
+    left: 8vw;
+    background-color: white;
+    width: 60vw;
+    height: 30vh;
+    padding: 7vh;
+    text-align: center;
+    font-size: 6vmin;
+    z-index: 2;
+    border-radius: 20px;
+
+}
+
+#startBtn {
+    position: absolute;
+    top: 35vh;
+    left: 30vw;
+    width: 22vw;
+    height: 5vh;
+    font-size: 5.5vmin;
+    font-family: Karantina;
+    border-radius: 8px;
+    border: 2px solid #e89024;
+    color: #e89024;
+    z-index: 3;
+}
+
+.hats {
+    position: absolute;
+    width: 25vw;
+    z-index: 0.5;
+}
+
+#hat1 {
+    top: 12vh;
+    left: 21vh;
+}
+
+#hat2 {
+    top: 36vh;
+    left: 20vh;
+}
+
+#hat3 {
+    top: 61vh;
+    left: 20vh;
+}
+
+#hatTextDiv {
+    position: absolute;
+    width: 51vw;
+    height: 57vh;
+    top: 11vh;
+    left: 9vw;
+    background-color: #efefeff2;
+    border: 2px solid #aba79e;
+    z-index: 2;
+    padding: 9vh;
+    border-radius: 20px;
+    display: none;
+}
+
+#nextBtn {
+    position: absolute;
+    top: 78vh;
+    left: 40vw;
+    width: 23vw;
+    height: 5vh;
+    font-size: 5.5vmin;
+    font-family: Karantina;
+    border-radius: 8px;
+    border: 2px solid #e89024;
+    color: #e89024;
+    z-index: 2;
+    display: none;
+}
+
+#doneBtn {
+    position: absolute;
+    width: 26vw;
+    height: 8vh;
+    top: 86vh;
+    left: 35vw;
+    background-color: #85827c;
+    border: 2px solid #ffffff;
+    border-radius: 14px;
+    font-size: 7vmin;
+    color: white;
+    font-family: Karantina;
+    display: none;
 }
