@@ -18,14 +18,17 @@ const openScreen = () => {
 
 const reception = () => {
     document.getElementById("arrow").addEventListener("click", () => {
-        // document.getElementById("arrow").classList.remove("animationLR");
-        document.getElementById("reception-div").classList.add("goLeft");
+        // document.getElementById("reception-div").classList.add("goLeft");
 
-        setTimeout(() => {
-            document.getElementById("reception").style.display = "none";
-            document.getElementById("hand-id").style.display = "block";
-            handId();
-        }, 1000);
+        // setTimeout(() => {
+        //     document.getElementById("reception").style.display = "none";
+        //     document.getElementById("hand-id").style.display = "block";
+        //     handId();
+        // }, 1000);
+
+        document.getElementById("reception").style.display = "none";
+        document.getElementById("hand-id").style.display = "block";
+        handId();
 
 
     });

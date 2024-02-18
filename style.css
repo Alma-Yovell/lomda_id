@@ -86,7 +86,7 @@ html {
     right: 33vw;
     width: 33vw;
     height: 7vh;
-    font-size: 7vmin;
+    font-size: 6.5vmin;
     font-family: Karantina;
     border-radius: 15px;
     border: 2px solid #e89024;
@@ -112,6 +112,7 @@ html {
 
 #reception {
     display: none;
+  
 }
 
 #reception-div{
@@ -165,10 +166,10 @@ html {
 
 @keyframes animationgoLeft {
     0% {
-        left: 0;
+        left: 0vw;
     }
     100% {
-        left: -100%; 
+        left: 2vw; 
     }
 }
 
@@ -204,7 +205,7 @@ html {
 
 #text-id {
     position: absolute;
-    top: 72vh;
+    top: 75vh;
     right: 27vw;
     width: 46vw;
     font-size: 8vmin;
@@ -223,4 +224,178 @@ html {
 
 #main-page {
     display: none;
+}
+
+/* ------------------main page--------------------- */
+
+#main-page {
+    direction: rtl;
+    height: 100vh;
+    width: 100vw;
+    background-image: url('../assets/media/background.png');
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+}
+
+#header{
+    position: absolute;
+    top: 8vh;
+    left: 23vw;
+}
+
+#imgLogo {
+    z-index: 3;
+}
+
+#idCard {
+    position: absolute;
+    top: 20vh;
+    left: 2vw;
+    width: 94vw;
+    height: 64vh;
+    border-radius: 57px;
+    border: 3px solid #d4dce3;
+    background-color: aliceblue;
+}
+
+#navBar {
+    position: absolute;
+    top: 5vh;
+    left: 2vw;
+    width: 0.3vw;
+    height: 89vh;
+    background-color: black;
+    display: none;
+}
+
+/* .circle {
+    border-radius: 84px;
+    background-color: black;
+    width: 1vw;
+    height: 2vh;
+    margin-bottom: 1vh;
+    transition: transform 0.2s ease-in-out;
+
+    &:hover {
+        transform: scale(1.6);
+        cursor: pointer;
+    }
+} */
+
+.header {
+    position: relative;
+    position: relative;
+    top: 2vh;
+    left: 10vw;
+    margin: 2vh;
+    display: block;
+}
+
+#container {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    height: 90vh;
+    position: absolute;
+    top: 5vh;
+    left: 1.6vw;
+    height: 90vh;
+    justify-content: space-between;
+}
+
+
+.text {
+    font-size: 6vmin;
+    position: absolute;
+    cursor: pointer;
+}
+
+#imgDiv {
+    top: 9vh;
+    left: 52.2vw;
+    width: 40vw;
+    position: absolute;
+    height: 25vh;
+    background-color: #e6edf3;
+    border-radius: 40px;
+    cursor: pointer;
+    z-index: 2;
+}
+
+#lastName {
+    top: 11vh;
+    left: 32vw;
+}
+
+#firstName {
+    top: 20vh;
+    left: 35.6vw;
+}
+
+#birthDate {
+    top: 30vh;
+    left: 32.4vw;
+}
+
+#date {
+    top: 38vh;
+    left: 31.8vw;
+}
+
+#expiration {
+    top: 46vh;
+    left: 42vw;
+}
+
+#numbers {
+    top: 55vh;
+    left: 3vw;
+    width: 36vw;
+    position: absolute;
+    height: 5vh;
+    background-color: #f8fcff;
+    border-radius: 73%;
+    color: #e1eaf3;
+    text-align: center;
+    font-size: 5vmin;
+    padding-top: 2vh;
+    cursor: pointer;
+}
+
+#idNumbers {
+    position: absolute;
+    top: 37vh;
+    left: 63vw;
+    color: #cad0d6;
+    font-size: 7vmin;
+    cursor: pointer;
+}
+
+#chip {
+    top: 12vh;
+    left: 3vw;
+    width: 15vw;
+    position: absolute;
+    height: 8vh;
+    background-color: #f1ede9;
+    border-radius: 7px;
+    cursor: pointer;
+}
+
+.clickHere {
+    animation: click 1s linear infinite;
+}
+
+@keyframes click {
+
+    0%,
+    100% {
+        transform: scale(1);
+        border: 3px solid rgb(247, 247, 155);
+    }
+
+    50% {
+        transform: scale(1.08);
+        border: 3px solid rgb(247, 247, 155);
+    }
 }
