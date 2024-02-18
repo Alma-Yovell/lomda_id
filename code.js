@@ -47,12 +47,11 @@ const handId = () => {
 
 const whichPage = (event) => {
     const currId = event.currentTarget.id;
-    console.log(currId);
-
     window[`open${currId}`]();
 }
 
 var openimgDiv = () => {
+    pageCounter = 0;
     document.getElementById("main-page").style.display = "none";
     document.getElementById("imgDiv-page").style.display = "block";
 
@@ -63,11 +62,12 @@ var openimgDiv = () => {
 
 }
 
-const showExpalntion = () => {
+const showExpalntion = (event) => {
+    const currHatNum = event.currentTarget.id.substring(3);
     document.getElementById("hatTextDiv").style.display = "block";
     document.getElementById("nextBtn").style.display = "block";
 
-    document.getElementById("hatTextDiv").innerText = arrHats[hatCounter];
+    document.getElementById("hatTextDiv").innerText = arrHats[currHatNum-1];
     document.getElementById("nextBtn").addEventListener("click", closeExpalntion);
 }
 
@@ -84,7 +84,7 @@ var closeExpalntion = () => {
         document.getElementById("hat3").setAttribute("src", "hat3.png");
         document.getElementById("hat3").addEventListener("click", showExpalntion);
     }
-    if(hatCounter === 3){
+    if (hatCounter === 3) {
         document.getElementById("doneBtn").style.display = "block";
         document.getElementById("doneBtn").addEventListener("click", donePage);
     }
@@ -93,14 +93,18 @@ var closeExpalntion = () => {
 
 const donePage = () => {
     const currPageId = arrElements[pageCounter];
-    // document.getElementById("currPageId").classList.remove("clickHere");
+    document.getElementById(currPageId).classList.remove("clickHere");
     document.getElementById(`${currPageId}-page`).style.display = "none";
     document.getElementById("main-page").style.display = "block";
 
+    if (currPageId === "imgDiv") {
+        document.getElementById("imgDiv").innerHTML = '<img id="imgLogo" src="imgLogo.png" />';
+    }
+
     pageCounter++;
     const nextId = arrElements[pageCounter];
-    // document.getElementById("nextId").classList.add("clickHere");
-    // document.getElementById("nextId").addEventListener("click", whichPage);
+    document.getElementById(nextId).classList.add("clickHere");
+    document.getElementById(nextId).addEventListener("click", whichPage);
 }
 
 

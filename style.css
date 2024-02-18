@@ -251,7 +251,14 @@ html {
 }
 
 #imgLogo {
+    top: 0.5vh;
+    left: 1.1vw;
+    position: absolute;
+    width: 39vw;
+    height: 24vh;
     z-index: 3;
+    border: 2px solid #494848;
+    border-radius: 26px;
 }
 
 #idCard {
@@ -267,12 +274,12 @@ html {
 
 #navBar {
     position: absolute;
-    top: 5vh;
-    left: 2vw;
-    width: 0.3vw;
-    height: 89vh;
+    top: 97vh;
+    left: 3vw;
+    width: 93vw;
+    height: 0.3vh;
     background-color: black;
-    display: none;
+    display: block;
 }
 
 /* .circle {
@@ -406,6 +413,12 @@ html {
 
 #imgDiv-page {
     display: none;
+}
+
+#title-imgDiv {
+    position: absolute;
+    top: 0vh;
+    left: 54vw;
 }
 
 .shadow {
