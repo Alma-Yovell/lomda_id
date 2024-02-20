@@ -49,11 +49,11 @@
 
         <div id="idCard">
             <div id="imgDiv"></div>
-            <div class="text " id="lastName"> שם משפחה: <br />העורף </div>
-            <div class="text " id="firstName"> שם פרטי: <br />פיקוד </div>
-            <div class="text" id="birthDate"> תאריך לידה: </div>
-            <div class="text" id="date"> תאריך הנפקה: </div>
-            <div class="text" id="expiration"> תוקף: </div>
+            <div class="text " id="lastName"> שם משפחה: <br /> <u>העורף</u> </div>
+            <div class="text " id="firstName"> שם פרטי: <br /> <u>פיקוד</u> </div>
+            <div class="text" id="birthDate"> תאריך לידה: <br /> </div>
+            <div class="text" id="date"> תאריך הנפקה: <br /> </div>
+            <div class="text" id="expiration"> תוקף: <br /> </div>
             <div id="numbers"> 0000000000000 </div>
             <div id="idNumbers"> 000000000 </div>
             <div id="chip"> </div>
@@ -87,39 +87,46 @@
 
     <div id="birthDate-page">
 
+        <h1 id="title-birthDate">תשתית חוקית פקע"ר</h1>
+
+
         <div class="book-section">
-             <div class="container">
+            <div class="container">
                 <div class="right">
-                     <figure class="back" id="back-cover"></figure>
-                     <figure class="front" style="background-color:white"></figure>
-                 </div>
-                 <div class="right">
-                     <figure class="back" style="background-color:#e5e5e5"></figure>
-                     <figure class="front" style="background-color:white"></figure>
-                 </div>
-                 <div class="right">
+                    <figure class="back" id="back-cover"></figure>
+                    <figure class="front" style="background-color:white"></figure>
+                </div>
+                <div class="right">
                     <figure class="back" style="background-color:#e5e5e5"></figure>
                     <figure class="front" style="background-color:white"></figure>
                 </div>
-                 <div class="right">
+                <div class="right">
                     <figure class="back" style="background-color:#e5e5e5"></figure>
                     <figure class="front" style="background-color:white"></figure>
                 </div>
-                 <div class="right">
+                <div class="right">
                     <figure class="back" style="background-color:#e5e5e5"></figure>
                     <figure class="front" style="background-color:white"></figure>
                 </div>
-                 <div class="right">
+                <div class="right">
+                    <figure class="back" style="background-color:#e5e5e5"></figure>
+                    <figure class="front" style="background-color:white"></figure>
+                </div>
+                <div class="right">
                     <figure class="back" style="background-color:#e5e5e5"></figure>
                     <figure class="front" id="cover">
-                         <h1>Book Title</h1>
-                         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci, modi.</p>
-                     </figure>
-                 </div>
-             </div>
-             <button onclick="turnRight()">Next</button> <button onclick="turnLeft()">Prev</button>
-             <br/>
-         </div>
+                        <h1> תשתית חוקית פק"ער</h1>
+                    </figure>
+                </div>
+            </div>
+            <button onclick="turnRight()">
+                <img class="arrowBtn"  alt="arrow01" src="arrow01.png" />
+            </button>
+            <button onclick="turnLeft()">
+                <img id="mirror" class="arrowBtn"  alt="arrow01" src="arrow01.png" />
+            </button>
+            <br />
+        </div>
 
         <button id="doneBookBtn">סיימתי</button>
 

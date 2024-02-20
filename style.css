@@ -8,8 +8,8 @@
 }
 
 @font-face {
-    font-family: Karantina;
-    src: url("assets/fonts/Karantina-Regular.ttf");
+    font-family: Heebo;
+    src: url("assets/fonts/Heebo-VariableFont_wght.ttf");
 }
 
 body,
@@ -18,17 +18,20 @@ html {
     padding: 0;
     height: 100%;
     overflow: hidden;
-    font-family: "Karantina";
+    font-family: "Heebo";
     direction: rtl;
     background-color: #f4f1de;
+    overflow: hidden; 
 }
 
 #title {
     position: absolute;
-    top: 21vh;
-    right: 28vw;
-    font-size: 16vmin;
+    top: 22vh;
+    right: 20vw;
+    font-size: 11vmin;
+    font-weight: bold;
     color: #3d405b;
+    text-align: center;
     z-index: 2;
 }
 
@@ -88,8 +91,8 @@ html {
     right: 33vw;
     width: 33vw;
     height: 7vh;
-    font-size: 6.5vmin;
-    font-family: Karantina;
+    font-size: 4.5vmin;
+    font-family: Heebo;
     border-radius: 15px;
     border: 2px solid #e89024;
     color: #e89024;
@@ -136,7 +139,7 @@ html {
     top: 31vh;
     right: 9vw;
     width: 81vw;
-    font-size: 8vmin;
+    font-size: 5vmin;
     text-align: center;
 }
 
@@ -215,7 +218,7 @@ html {
     top: 75vh;
     right: 27vw;
     width: 46vw;
-    font-size: 8vmin;
+    font-size: 5vmin;
     text-align: center;
 }
 
@@ -247,15 +250,16 @@ html {
 #header {
     position: absolute;
     top: 8vh;
-    left: 23vw;
+    left: 14vw;
+    font-size: 6vmin;
 }
 
 #imgLogo {
     top: 0.5vh;
-    left: 1.1vw;
+    left: 0.1vw;
     position: absolute;
-    width: 39vw;
-    height: 24vh;
+    width: 26vw;
+    height: 21vh;
     z-index: 3;
     border: 2px solid #494848;
     border-radius: 26px;
@@ -319,18 +323,18 @@ html {
 
 
 .text {
-    font-size: 6vmin;
+    font-size: 4vmin;
     position: absolute;
 }
 
 #imgDiv {
     top: 9vh;
-    left: 51.1vw;
-    width: 40vw;
+    left: 61.1vw;
+    width: 27vw;
     position: absolute;
-    height: 25vh;
+    height: 22vh;
     background-color: #e6edf3;
-    border-radius: 40px;
+    border-radius: 27px;
     z-index: 2;
 }
 
@@ -369,16 +373,16 @@ html {
     border-radius: 73%;
     color: #e1eaf3;
     text-align: center;
-    font-size: 5vmin;
+    font-size: 4vmin;
     padding-top: 2vh;
 }
 
 #idNumbers {
     position: absolute;
-    top: 37vh;
-    left: 63vw;
+    top: 36vh;
+    left: 65vw;
     color: #cad0d6;
-    font-size: 7vmin;
+    font-size: 4vmin;
 }
 
 #chip {
@@ -400,12 +404,12 @@ html {
     0%,
     100% {
         transform: scale(1);
-        border: 3px solid rgb(247, 247, 155);
+        border: 3px solid rgb(255, 157, 0);
     }
 
     50% {
         transform: scale(1.06);
-        border: 3px solid rgb(247, 247, 155);
+        border: 3px solid rgb(255, 157, 0);
     }
 }
 
@@ -417,8 +421,9 @@ html {
 
 #title-imgDiv {
     position: absolute;
-    top: 0vh;
-    left: 54vw;
+    top: 1vh;
+    left: 44vw;
+    font-size: 6vmin;
 }
 
 .shadow {
@@ -436,24 +441,23 @@ html {
     top: 21vh;
     left: 8vw;
     background-color: white;
-    width: 60vw;
-    height: 30vh;
-    padding: 7vh;
+    width: 62vw;
+    height: 38vh;
+    padding: 6vh;
     text-align: center;
-    font-size: 6vmin;
+    font-size: 4vmin;
     z-index: 2;
     border-radius: 20px;
-
 }
 
 #startBtn {
     position: absolute;
-    top: 35vh;
+    top: 41vh;
     left: 30vw;
-    width: 22vw;
-    height: 5vh;
-    font-size: 5.5vmin;
-    font-family: Karantina;
+    width: 19vw;
+    height: 4vh;
+    font-size: 4vmin;
+    font-family: Heebo;
     border-radius: 8px;
     border: 2px solid #e89024;
     color: #e89024;
@@ -467,18 +471,18 @@ html {
 }
 
 #hat1 {
-    top: 12vh;
-    left: 21vh;
+    top: 19vh;
+    left: 23vh;
 }
 
 #hat2 {
-    top: 36vh;
-    left: 20vh;
+    top: 39vh;
+    left: 22vh;
 }
 
 #hat3 {
-    top: 61vh;
-    left: 20vh;
+    top: 59vh;
+    left: 22vh;
 }
 
 #hatTextDiv {
@@ -501,8 +505,8 @@ html {
     left: 40vw;
     width: 23vw;
     height: 5vh;
-    font-size: 5.5vmin;
-    font-family: Karantina;
+    font-size: 3.5vmin;
+    font-family: Heebo;
     border-radius: 8px;
     border: 2px solid #e89024;
     color: #e89024;
@@ -513,23 +517,31 @@ html {
 #doneBtn {
     position: absolute;
     width: 26vw;
-    height: 8vh;
-    top: 86vh;
+    height: 7vh;
+    top: 83vh;
     left: 35vw;
     background-color: #85827c;
     border: 2px solid #ffffff;
     border-radius: 14px;
-    font-size: 7vmin;
+    font-size: 5vmin;
     color: white;
-    font-family: Karantina;
+    font-family: Heebo;
     display: none;
 }
 
 
 /* ------------------------------------birthDate------------------------------------------------- */
 
+
 #birthDate-page{
     display: none;
+}
+
+#title-birthDate{
+    position: absolute;
+    top: 1vh;
+    left: 28vw;
+    font-size: 6vmin;
 }
 
 .book-section{
@@ -540,10 +552,10 @@ html {
 }
 .book-section > .container{
     position: absolute;
-    left: 41vw;
-    top: -6vh;
-    height: 400px;
-    width: 314px;
+    left: 43vw;
+    top: 2vh;
+    height: 327px;
+    width: 321px;
     transform: translateX(-50%);
     border-radius: 2%;
     perspective: 1200px;
@@ -602,34 +614,42 @@ html {
     position: relative;
     top: 57vh;
     left: 11vw;
-    border: 2px solid #ef9f00;
+    border: none;
     background-color: transparent;
-    color: #ef9f00;
     padding: 10px 20px;
     border-radius: 5px;
     cursor: pointer;
     margin: 10px;
     transition: 0.3s ease-in-out;
 }
+
+.arrowBtn{
+    width: 11vw;
+    height: 4vh;
+}
+
+#mirror{
+    transform: scaleX(-1);
+}
+
 .book-section > button:focus, .book-section > button:active{
     outline: none;
 }
 .book-section > p{
     color: rgba(0,0,0,0.7);
-    font-family: calibri;
+    font-family: Heebo;
     font-size: 24px;
 }
 .book-section > p > a{
     text-decoration: none;
-    color: #ef9f00;
 }
 .book-section > button:hover{
-    background-color: #ef9f00;
     color: #fff;
+    transform: scale(1.2);
 }
 .front#cover, .back#back-cover{
     background-color: #ffcb63;
-    font-family: calibri;
+    font-family: Heebo;
     text-align: left;
     padding: 0 30px;
 }
@@ -644,14 +664,14 @@ html {
 #doneBookBtn{
     position: absolute;
     width: 26vw;
-    height: 8vh;
-    top: 86vh;
+    height: 7vh;
+    top: 83vh;
     left: 35vw;
     background-color: #85827c;
     border: 2px solid #ffffff;
     border-radius: 14px;
-    font-size: 7vmin;
+    font-size: 5vmin;
     color: white;
-    font-family: Karantina;
+    font-family: Heebo;
     display: block;
 }

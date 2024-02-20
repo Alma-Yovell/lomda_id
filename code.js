@@ -108,6 +108,9 @@ const donePage = () => {
     if (currPageId === "imgDiv") {
         document.getElementById("imgDiv").innerHTML = '<img id="imgLogo" src="imgLogo.png" />';
     }
+    if (currPageId === "birthDate") {
+        document.getElementById("birthDate").innerHTML += '<u>1992</u>';
+    }
 
     pageCounter++;
     const nextId = arrElements[pageCounter];
