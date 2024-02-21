@@ -67,8 +67,6 @@
         <div id="Instructions">
             <div class="shadow"></div>
             <div id="divInstructions">
-                הסבר הסבר הסבר הסבר הסבר הסבר הסבר הסבר הסבר הסבר הסבר הסבר הסבר הסבר הסבר הסבר הסבר הסבר
-                הסבר<br /><br />
                 לחצו על הכובע המסומן כדי ללמוד על כל תפקוד יותר. רק לאחר שתלמדו על שלושת התפקודים תוכלו להמשיך בלומדה
                 <button id="startBtn">התחל</button>
             </div>
@@ -89,48 +87,49 @@
 
         <h1 id="title-birthDate">תשתית חוקית פקע"ר</h1>
 
-
-        <div class="book-section">
-            <div class="container">
-                <div class="right">
-                    <figure class="back" id="back-cover"></figure>
-                    <figure class="front" style="background-color:white"></figure>
-                </div>
-                <div class="right">
-                    <figure class="back" style="background-color:#e5e5e5"></figure>
-                    <figure class="front" style="background-color:white"></figure>
-                </div>
-                <div class="right">
-                    <figure class="back" style="background-color:#e5e5e5"></figure>
-                    <figure class="front" style="background-color:white"></figure>
-                </div>
-                <div class="right">
-                    <figure class="back" style="background-color:#e5e5e5"></figure>
-                    <figure class="front" style="background-color:white"></figure>
-                </div>
-                <div class="right">
-                    <figure class="back" style="background-color:#e5e5e5"></figure>
-                    <figure class="front" style="background-color:white"></figure>
-                </div>
-                <div class="right">
-                    <figure class="back" style="background-color:#e5e5e5"></figure>
-                    <figure class="front" id="cover">
-                        <h1> תשתית חוקית פק"ער</h1>
-                    </figure>
+        <div class="bookWrapper">
+            <div class="bookBg">
+                <div class="pageBg centerClass">
+                    <div class="pageWrapper">
+                        <div id="page3" class="page">
+                            <div class="pageFace front">
+                                <h1>front3</h1>
+                                <div class="pageFoldRight"></div>
+                            </div>
+                            <div class="pageFace back">
+                                <h1>back3</h1>
+                                <div class="pageFoldLeft"></div>
+                            </div>
+                        </div>
+                        <div id="page2" class="page">
+                            <div class="pageFace front">
+                                <h1>front2</h1>
+                                <div class="pageFoldRight"></div>
+                            </div>
+                            <div class="pageFace back">
+                                <h1>back2</h1>
+                                <div class="pageFoldLeft"></div>
+                            </div>
+                        </div>
+                        <div id="page1" class="page">
+                            <div class="pageFace front">
+                                <h1>front1</h1>
+                                <div class="pageFoldRight"></div>
+                            </div>
+                            <div class="pageFace back">
+                                <h1>back1</h1>
+                                <div class="pageFoldLeft"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="myBookBg"></div>
                 </div>
             </div>
-            <button onclick="turnRight()">
-                <img class="arrowBtn"  alt="arrow01" src="arrow01.png" />
-            </button>
-            <button onclick="turnLeft()">
-                <img id="mirror" class="arrowBtn"  alt="arrow01" src="arrow01.png" />
-            </button>
-            <br />
         </div>
-
         <button id="doneBookBtn">סיימתי</button>
 
     </div>
+
 
 </body>
 

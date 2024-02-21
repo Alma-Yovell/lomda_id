@@ -255,14 +255,21 @@ html {
 }
 
 #imgLogo {
-    top: 0.5vh;
-    left: 0.1vw;
+    top: 2.5vh;
+    left: 4.1vw;
+    position: absolute;
+    width: 19vw;
+    height: 15vh;
+}
+
+#imgLogoDiv{
     position: absolute;
     width: 26vw;
     height: 21vh;
     z-index: 3;
     border: 2px solid #494848;
     border-radius: 26px;
+    background-color: #e89024;
 }
 
 #idCard {
@@ -544,123 +551,6 @@ html {
     font-size: 6vmin;
 }
 
-.book-section{
-    position: absolute;
-    left: 16vw;
-    top: 18vh;
-    text-align: center;
-}
-.book-section > .container{
-    position: absolute;
-    left: 43vw;
-    top: 2vh;
-    height: 327px;
-    width: 321px;
-    transform: translateX(-50%);
-    border-radius: 2%;
-    perspective: 1200px;
-}
-.container > .right{
-    position: absolute;
-    height: 100%;
-    width: 50%;
-    transition: 0.7s ease-in-out;
-    transform-style: preserve-3d;
-}
-.book-section > .container > .right{
-    right:0;
-    transform-origin: left;
-    border-radius: 10px 0 0 10px;
-}
-.right > figure.front, .right > figure.back{
-    margin: 0;
-    height: 100%;
-    width: 100%;
-    position: absolute;
-    left:0;
-    top:0;
-    background-size: 200%;
-    background-repeat: no-repeat;
-    backface-visibility: hidden;
-    background-color: white;
-    overflow: hidden;
-}
-.right > figure.front{
-    background-position: right;
-    border-radius: 0 10px 10px 0;
-    box-shadow: 2px 2px 15px -2px rgba(0,0,0,0.2);
-}
-.right > figure.back{
-    background-position: left;
-    border-radius: 10px 0 0 10px;
-    box-shadow: -2px 2px 15px -2px rgba(0,0,0,0.2);
-    transform: rotateY(180deg);
-}
-.flip{
-    transform: rotateY(-180deg);
-}
-.flip::before{
-    content: "";
-    position: absolute;
-    top:0;
-    left:0;
-    z-index: 10;
-    width: 100%;
-    height: 100%;
-    border-radius: 0 10px 10px 0;
-    background-color: rgba(0,0,0,0.1);
-}
-.book-section > button{
-    position: relative;
-    top: 57vh;
-    left: 11vw;
-    border: none;
-    background-color: transparent;
-    padding: 10px 20px;
-    border-radius: 5px;
-    cursor: pointer;
-    margin: 10px;
-    transition: 0.3s ease-in-out;
-}
-
-.arrowBtn{
-    width: 11vw;
-    height: 4vh;
-}
-
-#mirror{
-    transform: scaleX(-1);
-}
-
-.book-section > button:focus, .book-section > button:active{
-    outline: none;
-}
-.book-section > p{
-    color: rgba(0,0,0,0.7);
-    font-family: Heebo;
-    font-size: 24px;
-}
-.book-section > p > a{
-    text-decoration: none;
-}
-.book-section > button:hover{
-    color: #fff;
-    transform: scale(1.2);
-}
-.front#cover, .back#back-cover{
-    background-color: #ffcb63;
-    font-family: Heebo;
-    text-align: left;
-    padding: 0 30px;
-}
-.front#cover h1{
-    color: #fff;
-}
-.front#cover p{
-    color: rgba(0,0,0,0.8);
-    font-size: 14px;
-}
-
 #doneBookBtn{
     position: absolute;
     width: 26vw;
@@ -675,3 +565,99 @@ html {
     font-family: Heebo;
     display: block;
 }
+
+  .bookWrapper {
+    width:700px;
+    height:450px; 
+  }
+  .bookBg {
+    position:relative;
+    background-color: transparent;
+    width:100%;
+    height:100%;
+    border-radius: 12px;  
+  }
+  .centerClass {
+    position:absolute;
+    left:50%;
+    top:50%;
+  }
+  .pageBg {
+    background-color: transparent;
+    width:652px; 
+    height:422px;
+    border-radius: 0px;
+  }
+  .spineCenter {
+    width:2px; 
+    height:422px;
+    border-radius: 0px;
+    background:rgba(101,101,101,.4);
+  }
+  .pageWrapper {
+    position: absolute;
+    top: 10vh;
+    left: 5vw;
+    right: -8vw;
+    width: 50vw;
+    height: 50vh;
+    float: left;
+    -webkit-font-smoothing: antialiased;
+    z-index: 2;
+  }
+  .pageFace {
+    position: absolute;
+    top: 14vh;
+    left: -1vw;
+    width: 45vw;
+    height: 332px;
+    overflow: hidden;
+    text-align: center;
+  }
+  .front {
+    background: linear-gradient(to right,  #d9d9d9 0%,#f9f9f9 3%,#ffffff 8%,#ffffff 100%);
+    
+  }
+  .back {
+    background: linear-gradient(to right,  #ffffff 0%,#ffffff 92%,#f9f9f9 97%,#d9d9d9 100%);
+  }
+  .pageFoldRight {
+    position: absolute;
+      width:  0px;
+      height: 0px;
+      top:  0;
+      right: 0;
+      border-left-width: 1px;
+      border-left-color: #DDDDDD;
+      border-left-style: solid;
+      border-bottom-width: 1px;
+      border-bottom-color: #DDDDDD;
+      border-bottom-style: solid;
+      box-shadow: -5px 5px 10px #dddddd;
+  }
+  .pageFoldLeft {
+     position: absolute;
+      width:  0px;
+      height: 0px;
+      top:  0;
+      left: 0;
+      border-right-width: 1px;
+      border-right-color: #DDDDDD;
+      border-right-style: solid;
+      border-bottom-width: 1px;
+      border-bottom-color: #DDDDDD;
+      border-bottom-style: solid;
+      box-shadow: 5px 5px 10px #dddddd;
+  }
+  
+  #myBookBg{
+    position: absolute;
+    top: 22vh;
+    left: 84vw;
+    width: 94vw;
+    height: 96vw;
+    background-color: pink;
+    z-index: 1;
+    border-radius: 18px;
+  }
+  

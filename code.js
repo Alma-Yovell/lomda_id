@@ -1,10 +1,8 @@
 var pageCounter = 0;
 var arrElements = ["imgDiv", "birthDate", "date", "expiration", "numbers", "idNumbers", "chip"];
 var hatCounter = 0;
-var arrHats = ["הסבר1 הסבר 1 הסבר 1", "הסבר 2 הסבר 2 הסבר 2", "הסבר 3 הסבר 3 הסבר 3"]
-// var si = 0;
-// var z = 1;
-// var right = "";
+var arrHats = ["הסבר1 הסבר 1 הסבר 1", "הסבר 2 הסבר 2 הסבר 2", "הסבר 3 הסבר 3 הסבר 3"];
+var changCounter = 0;
 const pageLocation = {};
 let zi = 0;
 
@@ -105,10 +103,12 @@ const donePage = () => {
     document.getElementById(`${currPageId}-page`).style.display = "none";
     document.getElementById("main-page").style.display = "block";
 
-    if (currPageId === "imgDiv") {
-        document.getElementById("imgDiv").innerHTML = '<img id="imgLogo" src="imgLogo.png" />';
+    if (currPageId === "imgDiv" && changCounter === 0) {
+        changCounter++;
+        document.getElementById("imgDiv").innerHTML = '<div id="imgLogoDiv"> <img id="imgLogo" src="logoNoBackgrorund.png" /> </div>        ';
     }
-    if (currPageId === "birthDate") {
+    if (currPageId === "birthDate" && changCounter === 1) {
+        changCounter++
         document.getElementById("birthDate").innerHTML += '<u>1992</u>';
     }
 
@@ -123,49 +123,71 @@ var openbirthDate = () => {
     document.getElementById("main-page").style.display = "none";
     document.getElementById("birthDate-page").style.display = "block";
 
-    right = document.getElementsByClassName("right");
-    si = right.length;
-    z = 1;
-    turnRight();
+    let pageLocation = [];
+    let zIndexCounter = 0;
+
+    document.querySelector(".centerClass").style.transform = "translate(-50%, -50%)";
+    document.querySelector(".pageWrapper").style.left = "327px";
+    document.querySelector(".pageWrapper").style.perspective = "1000px";
+
+    document.querySelectorAll(".page").forEach(page => {
+        page.style.transformStyle = "preserve-3d";
+        const backFace = page.querySelector(".back");
+        if (backFace) backFace.style.transform = "rotateY(-180deg)";
+        const pageFaces = page.querySelectorAll(".front, .back");
+        pageFaces.forEach(face => face.style.backfaceVisibility = "hidden");
+
+        page.addEventListener("click", function () {
+            const isLeft = pageLocation[this.id] === "left" || false;
+            this.style.zIndex = ++zIndexCounter;
+            if (!isLeft) {
+                this.style.transformOrigin = "-1px top";
+                this.style.transition = "transform 1s";
+                this.style.transform = "rotateY(-180deg)";
+                this.classList.add("left");
+                this.classList.remove("right");
+                pageLocation[this.id] = "left";
+            } else {
+                this.style.transformOrigin = "left top";
+                this.style.transition = "transform 1s";
+                this.style.transform = "rotateY(0deg)";
+                this.classList.add("right");
+                this.classList.remove("left");
+                pageLocation[this.id] = "right";
+            }
+        });
+    });
+
+    document.querySelectorAll(".front").forEach(front => {
+        const pageFoldRight = front.querySelector(".pageFoldRight");
+        front.addEventListener("mouseenter", function () {
+            pageFoldRight.style.width = "50px";
+            pageFoldRight.style.height = "50px";
+            pageFoldRight.style.backgroundImage = "linear-gradient(45deg,  #fefefe 0%,#f2f2f2 49%,#ffffff 50%,#ffffff 100%)";
+        });
+        front.addEventListener("mouseleave", function () {
+            pageFoldRight.style.width = "0px";
+            pageFoldRight.style.height = "0px";
+        });
+    });
+
+    document.querySelectorAll(".back").forEach(back => {
+        const pageFoldLeft = back.querySelector(".pageFoldLeft");
+        back.addEventListener("mouseenter", function () {
+            pageFoldLeft.style.width = "50px";
+            pageFoldLeft.style.height = "50px";
+            pageFoldLeft.style.backgroundImage = "linear-gradient(135deg,  #ffffff 0%,#ffffff 50%,#f2f2f2 51%,#fefefe 100%)";
+        });
+        back.addEventListener("mouseleave", function () {
+            pageFoldLeft.style.width = "0px";
+            pageFoldLeft.style.height = "0px";
+        });
+    });
 
     document.getElementById("doneBookBtn").addEventListener("click", donePage);
 }
 
-var turnRight = () => {
-    if (si >= 1) {
-        si--;
-    }
-    else {
-        si = right.length - 1;
-        function sttmot(i) {
-            setTimeout(function () { right[i].style.zIndex = "auto"; }, 300);
-        }
-        for (var i = 0; i < right.length; i++) {
-            right[i].className = "right";
-            sttmot(i);
-            z = 1;
-        }
-    }
-    right[si].classList.add("flip");
-    z++;
-    right[si].style.zIndex = z;
-}
 
-var turnLeft = () => {
-
-    if (si < right.length) {
-        si++;
-    }
-    else {
-        si = 1;
-        for (var i = right.length - 1; i > 0; i--) {
-            right[i].classList.add("flip");
-            right[i].style.zIndex = right.length + 1 - i;
-        }
-    }
-    right[si - 1].className = "right";
-    setTimeout(function () { right[si - 1].style.zIndex = "auto"; }, 350);
-}
 
 
 
