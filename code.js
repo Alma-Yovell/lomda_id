@@ -109,7 +109,7 @@ const donePage = () => {
     }
     if (currPageId === "birthDate" && changCounter === 1) {
         changCounter++
-        document.getElementById("birthDate").innerHTML += '<u>1992</u>';
+        document.getElementById("birthDate").innerHTML += '<u>17.02.1992</u>';
     }
 
     pageCounter++;
@@ -118,11 +118,7 @@ const donePage = () => {
     document.getElementById(nextId).addEventListener("click", whichPage);
 }
 
-var openbirthDate = () => {
-    pageCounter = 1;
-    document.getElementById("main-page").style.display = "none";
-    document.getElementById("birthDate-page").style.display = "block";
-
+const flipBook = () => {
     let pageLocation = [];
     let zIndexCounter = 0;
 
@@ -183,11 +179,16 @@ var openbirthDate = () => {
             pageFoldLeft.style.height = "0px";
         });
     });
+};
+var openbirthDate = () => {
+    pageCounter = 1;
+    document.getElementById("main-page").style.display = "none";
+    document.getElementById("birthDate-page").style.display = "block";
+
+    flipBook();
 
     document.getElementById("doneBookBtn").addEventListener("click", donePage);
-}
-
-
+};
 
 
 
