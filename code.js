@@ -111,6 +111,10 @@ const donePage = () => {
         changCounter++
         document.getElementById("birthDate").innerHTML += '<u>17.02.1992</u>';
     }
+    if (currPageId === "date" && changCounter === 2) {
+        changCounter++
+        document.getElementById("date").innerHTML += '<u>010101</u>';
+    }
 
     pageCounter++;
     const nextId = arrElements[pageCounter];
@@ -189,6 +193,41 @@ var openbirthDate = () => {
 
     document.getElementById("doneBookBtn").addEventListener("click", donePage);
 };
+
+var opendate = () => {
+    pageCounter = 2;
+    document.getElementById("main-page").style.display = "none";
+    document.getElementById("date-page").style.display = "block";
+
+    document.getElementById("btnTree1").addEventListener("click", openTreeOne);
+    document.getElementById("btnTree2").addEventListener("click", openTreeTwo);
+
+    document.getElementById("doneTreeBtn").addEventListener("click", donePage);
+
+}
+
+var openTreeOne = () => {
+    document.getElementById("tree1-page").style.display = "block";
+    document.getElementById("date-page").style.display = "none";
+
+    document.getElementById("backBtn1").addEventListener("click", () => {
+        document.getElementById("tree1-page").style.display = "none";
+        document.getElementById("date-page").style.display = "block";
+    });
+
+}
+
+var openTreeTwo = () => {
+    document.getElementById("tree2-page").style.display = "block";
+    document.getElementById("date-page").style.display = "none";
+
+    document.getElementById("backBtn2").addEventListener("click", () => {
+        document.getElementById("tree2-page").style.display = "none";
+        document.getElementById("date-page").style.display = "block";
+    });
+}
+
+
 
 
 
