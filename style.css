@@ -719,11 +719,7 @@ html {
 
 .backBtn{
     position: absolute;
-<<<<<<< HEAD
     top: 84vh;
-=======
-    top: 94vh;
->>>>>>> 42b19f9c0ec3af690716d3b38426da91d57cdadc
     left: 7vw;
     background-color: transparent;
     border: none;
