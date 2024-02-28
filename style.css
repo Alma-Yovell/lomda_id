@@ -299,7 +299,7 @@ html {
     display: flex;
     flex-wrap: wrap;
     flex-direction: row;
-    width: 51vh;
+    width: 42vh;
     position: absolute;
     top: -0.77vh;
     left: -0.4vw;
@@ -321,7 +321,7 @@ html {
     }
 }
 
-#lineChange{
+/* #lineChange{
     position: absolute;
     top: 82vh;
     left: 80vw;
@@ -329,7 +329,7 @@ html {
     height: 0.3vh;
     background-color: #105984;
     display: none;
-}
+} */
 
 .header {
     position: relative;
@@ -412,6 +412,14 @@ html {
     height: 8vh;
     background-color: #f1ede9;
     border-radius: 7px;
+}
+
+#imgChip{
+    top: 0vh;
+    left: 0vw;
+    position: absolute;
+    width: 15vw;
+    height: 8vh;
 }
 
 .clickHere {
@@ -533,18 +541,21 @@ html {
     display: none;
 }
 
-#doneBtn {
+.doneStyle{
     position: absolute;
     width: 26vw;
     height: 7vh;
-    top: 83vh;
-    left: 35vw;
     background-color: #85827c;
     border: 2px solid #ffffff;
     border-radius: 14px;
     font-size: 5vmin;
     color: white;
     font-family: Heebo;
+}
+
+#doneBtn {
+    top: 83vh;
+    left: 35vw;
     display: none;
 }
 
@@ -564,17 +575,8 @@ html {
 }
 
 #doneBookBtn {
-    position: absolute;
-    width: 26vw;
-    height: 7vh;
     top: 83vh;
     left: 35vw;
-    background-color: #85827c;
-    border: 2px solid #ffffff;
-    border-radius: 14px;
-    font-size: 5vmin;
-    color: white;
-    font-family: Heebo;
     display: block;
 }
 
@@ -677,7 +679,7 @@ html {
     box-shadow: 5px 5px 10px #dddddd;
 }
 
-#myBookBg {
+/* #myBookBg {
     position: absolute;
     top: 22vh;
     left: 84vw;
@@ -686,7 +688,7 @@ html {
     background-color: pink;
     z-index: 1;
     border-radius: 18px;
-}
+} */
 
 /* ---------------------------date-page---------------------------------------------------- */
 
@@ -753,16 +755,84 @@ html {
 }
 
 #doneTreeBtn{
-    position: absolute;
-    width: 26vw;
-    height: 7vh;
     top: 83vh;
     left: 35vw;
-    background-color: #85827c;
-    border: 2px solid #ffffff;
-    border-radius: 14px;
-    font-size: 5vmin;
-    color: white;
-    font-family: Heebo;
     display: block;
 }
+
+/* -------------------------------------expiration-page------------------------------------------------------- */
+
+#expiration-page{
+    display: none;
+}
+
+#title-expiration {
+    position: absolute;
+    top: 1vh;
+    left: 28vw;
+    font-size: 6vmin;
+}
+
+#doneExpirationBtn{
+    top: 83vh;
+    left: 35vw;
+    display: block;
+}
+
+/* -------------------------------------numbers-page------------------------------------------------------- */
+
+#numbers-page{
+    display: none;
+}
+
+#title-numbers {
+    position: absolute;
+    top: 1vh;
+    left: 28vw;
+    font-size: 6vmin;
+}
+
+#donenumbersBtn{
+    top: 83vh;
+    left: 35vw;
+    display: block;
+}
+
+/* -------------------------------------idNumbers-page------------------------------------------------------- */
+
+#idNumbers-page{
+    display: none;
+}
+
+#title-idNumbers {
+    position: absolute;
+    top: 1vh;
+    left: 28vw;
+    font-size: 6vmin;
+}
+
+#doneidNumbersBtn{
+    top: 83vh;
+    left: 35vw;
+    display: block;
+}
+
+/* -------------------------------------chip-page------------------------------------------------------- */
+
+#chip-page{
+    display: none;
+}
+
+#title-chip {
+    position: absolute;
+    top: 1vh;
+    left: 28vw;
+    font-size: 6vmin;
+}
+
+#donechipBtn{
+    top: 83vh;
+    left: 35vw;
+    display: block;
+}
+

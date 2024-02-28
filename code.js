@@ -55,8 +55,8 @@ const handId = () => {
 
 const whichPage = (event) => {
     const currId = event.currentTarget.id;
-    window[`open${currId}`]();
     console.log(currId)
+    window[`open${currId}`]();
 }
 
 var openimgDiv = () => {
@@ -109,17 +109,37 @@ const donePage = () => {
 
     if (currPageId === "imgDiv" && changCounter === 0) {
         changCounter++;
-        document.getElementById("imgDiv").innerHTML = '<div id="imgLogoDiv"> <img id="imgLogo" src="logoNoBackgrorund.png" /> </div>        ';
+        document.getElementById("imgDiv").innerHTML = '<div id="imgLogoDiv"> <img id="imgLogo" src="logoNoBackgrorund.png" /> </div>';
     }
     if (currPageId === "birthDate" && changCounter === 1) {
         changCounter++
         document.getElementById("birthDate").innerHTML += '<u>17.02.1992</u>';
-        document.getElementById("lineChange").style.cssText += "display: block; left: 80vw; width: 16vw;";
+        // document.getElementById("lineChange").style.cssText += "display: block; left: 80vw; width: 16vw;";
     }
     if (currPageId === "date" && changCounter === 2) {
         changCounter++
         document.getElementById("date").innerHTML += '<u>010101</u>';
     }
+    if (currPageId === "expiration" && changCounter === 3) {
+        changCounter++
+        document.getElementById("expiration").innerHTML += '<u>235.365.4</u>';
+    }
+    if (currPageId === "numbers" && changCounter === 4) {
+        changCounter++
+        document.getElementById("numbers").style.color= "rgb(58, 56, 56)"
+        document.getElementById("numbers").innerHTML = '456765445654';
+    }
+    if (currPageId === "idNumbers" && changCounter === 5) {
+        changCounter++
+        document.getElementById("idNumbers").style.color= "rgb(58, 56, 56)"
+        document.getElementById("idNumbers").innerHTML = '112233999';
+    }
+    if (currPageId === "chip" && changCounter === 6) {
+        changCounter++
+        document.getElementById("chip").innerHTML += '<img id="imgChip" src="imgChip.png" />';
+    }
+  
+
 
     pageCounter++;
     const nextId = arrElements[pageCounter];
@@ -233,6 +253,38 @@ var openTreeTwo = () => {
         document.getElementById("date-page").style.display = "block";
     });
 }
+
+var openexpiration = () => {
+    pageCounter = 3;
+    document.getElementById("main-page").style.display = "none";
+    document.getElementById("expiration-page").style.display = "block";
+
+    document.getElementById("doneExpirationBtn").addEventListener("click", donePage);
+};
+
+var opennumbers = () => {
+    pageCounter = 4;
+    document.getElementById("main-page").style.display = "none";
+    document.getElementById("numbers-page").style.display = "block";
+
+    document.getElementById("donenumbersBtn").addEventListener("click", donePage);
+};
+
+var openidNumbers = () => {
+    pageCounter = 5;
+    document.getElementById("main-page").style.display = "none";
+    document.getElementById("idNumbers-page").style.display = "block";
+
+    document.getElementById("doneidNumbersBtn").addEventListener("click", donePage);
+};
+
+var openchip = () => {
+    pageCounter = 6;
+    document.getElementById("main-page").style.display = "none";
+    document.getElementById("chip-page").style.display = "block";
+
+    document.getElementById("donechipBtn").addEventListener("click", donePage);
+};
 
 
 
