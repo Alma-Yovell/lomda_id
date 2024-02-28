@@ -26,9 +26,9 @@ html {
 
 #title {
     position: absolute;
-    top: 22vh;
-    right: 20vw;
-    font-size: 11vmin;
+    top: 19vh;
+    right: 22vw;
+    font-size: 10vmin;
     font-weight: bold;
     color: #3d405b;
     text-align: center;
@@ -37,7 +37,7 @@ html {
 
 #circle {
     position: absolute;
-    top: 16vh;
+    top: 13vh;
     right: 3vw;
     background-color: #f9f7eb;
     border-radius: 53%;
@@ -48,7 +48,7 @@ html {
 
 #fingerPrint {
     position: absolute;
-    top: 44vh;
+    top: 40vh;
     right: 34vw;
     width: 31vw;
     z-index: 2;
@@ -56,7 +56,7 @@ html {
 
 #line {
     position: absolute;
-    top: 45vh;
+    top: 41vh;
     right: 34.3vw;
     border-top: 4px solid green;
     border-bottom: none;
@@ -69,17 +69,17 @@ html {
 
     0%,
     100% {
-        top: 45vh;
+        top: 41vh;
     }
 
     50% {
-        top: 65vh;
+        top: 61vh;
     }
 }
 
 #logo {
     position: absolute;
-    top: 41vh;
+    top: 37vh;
     right: 20vw;
     width: 60vw;
     z-index: 3;
@@ -87,17 +87,18 @@ html {
 
 #btn {
     position: absolute;
-    top: 82vh;
-    right: 33vw;
+    top: 77vh;
+    right: 34vw;
     width: 33vw;
     height: 7vh;
-    font-size: 4.5vmin;
+    font-size: 4vmin;
     font-family: Heebo;
     border-radius: 15px;
-    border: 2px solid #e89024;
+    border: 1px solid #e89024;
     color: #e89024;
     cursor: pointer;
     z-index: 2;
+    background-color: #f9f7eb;
 }
 
 .animationShow {
@@ -136,7 +137,7 @@ html {
 
 #text-register {
     position: absolute;
-    top: 31vh;
+    top: 11vh;
     right: 9vw;
     width: 81vw;
     font-size: 5vmin;
@@ -249,9 +250,10 @@ html {
 
 #header {
     position: absolute;
-    top: 8vh;
-    left: 14vw;
-    font-size: 6vmin;
+    top: 13vh;
+    left: 19vw;
+    z-index: 3;
+    font-size: 5vmin;
 }
 
 #imgLogo {
@@ -274,7 +276,7 @@ html {
 
 #idCard {
     position: absolute;
-    top: 20vh;
+    top: 12vh;
     left: 2vw;
     width: 94vw;
     height: 64vh;
@@ -285,18 +287,30 @@ html {
 
 #navBar {
     position: absolute;
-    top: 97vh;
-    left: 3vw;
-    width: 93vw;
+    top: 82vh;
+    left: 5vw;
+    width: 90vw;
     height: 0.3vh;
-    background-color: black;
+    background-color: #70c9e8;
     display: block;
 }
 
-/* .circle {
+#container {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    width: 51vh;
+    position: absolute;
+    top: -0.77vh;
+    left: -0.4vw;
+    height: 1vh;
+    justify-content: space-between;
+}
+
+.circle {
     border-radius: 84px;
-    background-color: black;
-    width: 1vw;
+    background-color: #70c9e8 ;
+    width: 3.5vw;
     height: 2vh;
     margin-bottom: 1vh;
     transition: transform 0.2s ease-in-out;
@@ -305,7 +319,17 @@ html {
         transform: scale(1.6);
         cursor: pointer;
     }
-} */
+}
+
+#lineChange{
+    position: absolute;
+    top: 82vh;
+    left: 80vw;
+    width: 14vw;
+    height: 0.3vh;
+    background-color: #105984;
+    display: none;
+}
 
 .header {
     position: relative;
@@ -314,18 +338,6 @@ html {
     left: 10vw;
     margin: 2vh;
     display: block;
-}
-
-#container {
-    display: flex;
-    flex-wrap: wrap;
-    flex-direction: column;
-    height: 90vh;
-    position: absolute;
-    top: 5vh;
-    left: 1.6vw;
-    height: 90vh;
-    justify-content: space-between;
 }
 
 
@@ -394,7 +406,7 @@ html {
 
 #chip {
     top: 12vh;
-    left: 3vw;
+    left: 6vw;
     width: 15vw;
     position: absolute;
     height: 8vh;

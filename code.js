@@ -20,26 +20,26 @@ const openScreen = () => {
     }, 2000);
     document.getElementById("btn").addEventListener("click", () => {
         document.getElementById("open-screen").style.display = "none";
-        document.getElementById("reception").style.display = "block";
-        reception();
-    });
-}
-
-const reception = () => {
-    document.getElementById("arrow").addEventListener("click", () => {
-        // document.getElementById("reception-div").classList.add("goLeft");
-
-        // setTimeout(() => {
-        //     document.getElementById("reception").style.display = "none";
-        //     document.getElementById("hand-id").style.display = "block";
-        //     handId();
-        // }, 1000);
-
-        document.getElementById("reception").style.display = "none";
         document.getElementById("hand-id").style.display = "block";
         handId();
     });
 }
+
+// const reception = () => {
+//     document.getElementById("arrow").addEventListener("click", () => {
+//         // document.getElementById("reception-div").classList.add("goLeft");
+
+//         // setTimeout(() => {
+//         //     document.getElementById("reception").style.display = "none";
+//         //     document.getElementById("hand-id").style.display = "block";
+//         //     handId();
+//         // }, 1000);
+
+//         document.getElementById("reception").style.display = "none";
+//         document.getElementById("hand-id").style.display = "block";
+//         handId();
+//     });
+// }
 
 const handId = () => {
     document.getElementById("idDiv").addEventListener("click", () => {
@@ -47,6 +47,9 @@ const handId = () => {
         document.getElementById("main-page").style.display = "block";
         document.getElementById("imgDiv").addEventListener("click", whichPage);
         document.getElementById("imgDiv").classList.add("clickHere");
+        for (let i = 0; i < 7; i++) {
+            document.getElementById("container").innerHTML += `<div class="circle" id="circle${i + 1}"></div>`;
+        }
     });
 }
 
@@ -102,6 +105,7 @@ const donePage = () => {
     document.getElementById(currPageId).classList.remove("clickHere");
     document.getElementById(`${currPageId}-page`).style.display = "none";
     document.getElementById("main-page").style.display = "block";
+    document.getElementById(`circle${pageCounter + 1}`).style.backgroundColor = "#105984";
 
     if (currPageId === "imgDiv" && changCounter === 0) {
         changCounter++;
@@ -110,6 +114,7 @@ const donePage = () => {
     if (currPageId === "birthDate" && changCounter === 1) {
         changCounter++
         document.getElementById("birthDate").innerHTML += '<u>17.02.1992</u>';
+        document.getElementById("lineChange").style.cssText += "display: block; left: 80vw; width: 16vw;";
     }
     if (currPageId === "date" && changCounter === 2) {
         changCounter++
@@ -183,7 +188,9 @@ const flipBook = () => {
             pageFoldLeft.style.height = "0px";
         });
     });
-};
+}
+
+
 var openbirthDate = () => {
     pageCounter = 1;
     document.getElementById("main-page").style.display = "none";
