@@ -6,6 +6,45 @@ var changCounter = 0;
 const pageLocation = {};
 let zi = 0;
 
+var quizCouner = 0;
+const ArrQuestion = [
+    {
+        question: "שאלה 1",
+        answers: [
+            {
+                answer: "תשובה יפה תשובה טובה",
+            },
+            {
+                answer: "תשובה יפה תשובה טובה",
+            },
+            {
+                answer: "תשובה יפה תשובה טובה",
+            },
+            {
+                answer: "תשובה יפה תשובה טובה",
+            }
+        ],
+        correct: 1
+    },
+    {
+        question: "שאלה 2",
+        answers: [
+            {
+                answer: "תשובה יפה תשובה טובה",
+            },
+            {
+                answer: "תשובה יפה תשובה טובה",
+            },
+            {
+                answer: "תשובה יפה תשובה טובה",
+            },
+            {
+                answer: "תשובה יפה תשובה טובה",
+            }
+        ],
+        correct: 2
+    }
+];
 
 
 window.addEventListener("load", () => {
@@ -126,19 +165,19 @@ const donePage = () => {
     }
     if (currPageId === "numbers" && changCounter === 4) {
         changCounter++
-        document.getElementById("numbers").style.color= "rgb(58, 56, 56)"
+        document.getElementById("numbers").style.color = "rgb(58, 56, 56)"
         document.getElementById("numbers").innerHTML = '456765445654';
     }
     if (currPageId === "idNumbers" && changCounter === 5) {
         changCounter++
-        document.getElementById("idNumbers").style.color= "rgb(58, 56, 56)"
+        document.getElementById("idNumbers").style.color = "rgb(58, 56, 56)"
         document.getElementById("idNumbers").innerHTML = '112233999';
     }
     if (currPageId === "chip" && changCounter === 6) {
         changCounter++
         document.getElementById("chip").innerHTML += '<img id="imgChip" src="imgChip.png" />';
     }
-  
+
 
 
     pageCounter++;
@@ -283,7 +322,49 @@ var openchip = () => {
     document.getElementById("main-page").style.display = "none";
     document.getElementById("chip-page").style.display = "block";
 
-    document.getElementById("donechipBtn").addEventListener("click", donePage);
+    document.getElementById("btn-back").addEventListener("click", () => {
+        document.getElementById("main-page").style.display = "block";
+        document.getElementById("chip-page").style.display = "none";
+    });
+
+    document.getElementById("btn-start").addEventListener("click", () => {
+        document.getElementById("intro").style.display = "none";
+        document.getElementById("btn-start").style.display = "none";
+        document.getElementById("btn-back").style.display = "none";
+        document.getElementById("counter").style.display = "block";
+        showQuiz();
+    });
+
+    // document.getElementById("donechipBtn").addEventListener("click", donePage);
+};
+
+var showQuiz = () => {
+    document.getElementById("question").style.display = "block";
+    document.getElementById("answer-div").style.display = "block";
+
+    document.getElementById("question").innerText = ArrQuestion[quizCouner].question;
+    for (let i = 1; i <= 4; i++) {
+        document.getElementById(`answer${i}`).innerText = ArrQuestion[quizCouner].answers[i - 1].answer;
+        document.getElementById(`answer${i}`).addEventListener("click", checkAns);
+    }
+};
+
+var checkAns = (event) => {
+    for (let i = 1; i <= 4; i++) {
+        document.getElementById(`answer${i}`).removeEventListener("click", checkAns);
+    }
+    let currAnsNum = (event.currentTarget.id).substring(6);
+    if (currAnsNum == ArrQuestion[quizCouner].correct) {
+        event.currentTarget.style.backgroundColor = "#a3e0a5";
+    } else {
+        event.currentTarget.style.backgroundColor = "#f8b1ac";
+    }
+
+    setTimeout(() => {
+        document.getElementById(`answer${currAnsNum}`).style.backgroundColor = "#ffe3b3";
+        quizCouner++;
+        showQuiz();
+    }, 4000);
 };
 
 

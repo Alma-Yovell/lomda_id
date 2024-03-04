@@ -792,6 +792,30 @@ html {
     font-size: 6vmin;
 }
 
+#map{
+    position: absolute;
+    top: 10vh;
+    left: 6vw;
+    width: 90vw;
+    height: 70vh;
+}
+
+/* Add these styles to enable pinch-to-zoom on touch-enabled devices */
+.zoomable-map-container {
+    overflow: auto; /* Enable scrolling for overflow content */
+    max-width: 100%; /* Limit width to prevent horizontal scrolling */
+    max-height: 70vh; /* Limit height to prevent excessive scrolling */
+    border: 1px solid #ccc; /* Add a border to maintain visual consistency */
+}
+
+/* Ensure the image fits within the container without stretching */
+.zoomable-map-container img {
+    max-width: 100%; /* Ensure the image does not exceed container width */
+    height: auto; /* Maintain aspect ratio */
+    display: block; /* Ensure proper rendering */
+    margin: auto; /* Center the image within its container */
+}
+
 #donenumbersBtn{
     top: 83vh;
     left: 35vw;
@@ -830,9 +854,85 @@ html {
     font-size: 6vmin;
 }
 
-#donechipBtn{
+#quiz-div{
+    position: absolute;
+    top: 10vh;
+    left: 7vw;
+    width: 88vw;
+    height: 70vh;
+    border-radius: 46px;
+    background-color: #f9f7eb;
+    border: 1px solid #fec841;
+}
+
+#intro{
+    position: absolute;
+    top: -4vh;
+    left: -35vw;
+    width: 73vw;
+    text-align: center;
+    margin: 20vh;
+    font-weight: bold;
+    font-size: 4vmin;
+}
+
+
+#counter{
+    position: absolute;
+    top: 3vh;
+    left: 7vw;
+    font-size: 3vmin;
+    display: none;
+}
+
+.quizBtn{
+    position: absolute;
+    width: 12vh;
+    height: 6vh;
+    font-size: 3vmin;
+    background-color: #9997fd;
+    border-radius: 2vh;
+    border: 1px solid palevioletred;
+    font-family: "Heebo";
+}
+
+#btn-back{
+    top: 60vh;
+    left: 51vw;
+}
+
+#btn-start{
+    top: 60vh;
+    left: 10vw;
+}
+
+/* #donechipBtn{
     top: 83vh;
     left: 35vw;
     display: block;
+} */
+
+#question{
+    position: absolute;
+    top: 12vh;
+    left: 63vw;
+    font-size: 4vmin;
+    font-weight: bold;
+}
+
+#answer-div{
+    display: none;
+    position: absolute;
+    top: 23vh;
+    left: 10vw;
+}
+
+.answers{
+    font-size: 3vmin;
+    width: 28vh;
+    height: 2vh;
+    padding: 2vh;
+    background-color: #ffe3b3;
+    border: 1px solid #0f6890;
 }
 
