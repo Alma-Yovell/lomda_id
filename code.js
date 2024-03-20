@@ -368,7 +368,6 @@ var doneQuiz = () => {
     document.getElementById("sucess-counter").innerText = `ענית על ${sucessCounter} תשובות נכונות מתוך 10`
     document.getElementById("quiz-again").style.display = "block";
     // document.getElementById("quiz-again").addEventListener("click", () => {
-
     //     document.getElementById("done-text").style.display = "none";
     //     document.getElementById("sucess-counter").style.display = "none";
     //     document.getElementById("quiz-again").style.display = "none";
