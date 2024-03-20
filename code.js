@@ -7,6 +7,7 @@ const pageLocation = {};
 let zi = 0;
 
 var quizCouner = 0;
+var sucessCounter = 0;
 const ArrQuestion = [
     {
         question: "שאלה 1",
@@ -63,22 +64,6 @@ const openScreen = () => {
         handId();
     });
 }
-
-// const reception = () => {
-//     document.getElementById("arrow").addEventListener("click", () => {
-//         // document.getElementById("reception-div").classList.add("goLeft");
-
-//         // setTimeout(() => {
-//         //     document.getElementById("reception").style.display = "none";
-//         //     document.getElementById("hand-id").style.display = "block";
-//         //     handId();
-//         // }, 1000);
-
-//         document.getElementById("reception").style.display = "none";
-//         document.getElementById("hand-id").style.display = "block";
-//         handId();
-//     });
-// }
 
 const handId = () => {
     document.getElementById("idDiv").addEventListener("click", () => {
@@ -331,14 +316,13 @@ var openchip = () => {
         document.getElementById("intro").style.display = "none";
         document.getElementById("btn-start").style.display = "none";
         document.getElementById("btn-back").style.display = "none";
-        document.getElementById("counter").style.display = "block";
+        quizCouner = 0;
         showQuiz();
     });
-
-    // document.getElementById("donechipBtn").addEventListener("click", donePage);
 };
 
 var showQuiz = () => {
+    document.getElementById("counter").style.display = "block";
     document.getElementById("question").style.display = "block";
     document.getElementById("answer-div").style.display = "block";
 
@@ -356,6 +340,7 @@ var checkAns = (event) => {
     let currAnsNum = (event.currentTarget.id).substring(6);
     if (currAnsNum == ArrQuestion[quizCouner].correct) {
         event.currentTarget.style.backgroundColor = "#a3e0a5";
+        sucessCounter++;
     } else {
         event.currentTarget.style.backgroundColor = "#f8b1ac";
     }
@@ -363,8 +348,50 @@ var checkAns = (event) => {
     setTimeout(() => {
         document.getElementById(`answer${currAnsNum}`).style.backgroundColor = "#ffe3b3";
         quizCouner++;
-        showQuiz();
+        if (quizCouner === 2) {
+            document.getElementById("counter").innerText = `${quizCouner}/10`;
+            doneQuiz()
+        } else {
+            document.getElementById("counter").innerText = `${quizCouner}/10`;
+            showQuiz();
+        }
     }, 4000);
+};
+
+var doneQuiz = () => {
+    document.getElementById("counter").style.display = "none";
+    document.getElementById("question").style.display = "none";
+    document.getElementById("answer-div").style.display = "none";
+
+    document.getElementById("done-text").style.display = "block";
+    document.getElementById("sucess-counter").style.display = "block";
+    document.getElementById("sucess-counter").innerText = `ענית על ${sucessCounter} תשובות נכונות מתוך 10`
+    document.getElementById("quiz-again").style.display = "block";
+    // document.getElementById("quiz-again").addEventListener("click", () => {
+
+    //     document.getElementById("done-text").style.display = "none";
+    //     document.getElementById("sucess-counter").style.display = "none";
+    //     document.getElementById("quiz-again").style.display = "none";
+    //     document.getElementById("done-lomda").style.display = "none";
+    //     sucessCounter = 0;
+
+    //     document.getElementById("chip-page").style.display = "block";
+
+    //     document.getElementById("btn-back").addEventListener("click", () => {
+    //         document.getElementById("main-page").style.display = "block";
+    //         document.getElementById("chip-page").style.display = "none";
+    //     });
+
+    //     document.getElementById("btn-start").addEventListener("click", () => {
+    //         document.getElementById("intro").style.display = "none";
+    //         document.getElementById("btn-start").style.display = "none";
+    //         document.getElementById("btn-back").style.display = "none";
+    //         quizCouner = 0;
+    //         showQuiz();
+    //     });
+    // });
+    document.getElementById("done-lomda").style.display = "block";
+    document.getElementById("done-lomda").addEventListener("click", donePage);
 };
 
 

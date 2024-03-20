@@ -906,12 +906,6 @@ html {
     left: 10vw;
 }
 
-/* #donechipBtn{
-    top: 83vh;
-    left: 35vw;
-    display: block;
-} */
-
 #question{
     position: absolute;
     top: 12vh;
@@ -934,5 +928,37 @@ html {
     padding: 2vh;
     background-color: #ffe3b3;
     border: 1px solid #0f6890;
+}
+
+#done-text{
+    display: none;
+    position: absolute;
+    top: -2vh;
+    left: -35vw;
+    width: 73vw;
+    text-align: center;
+    margin: 20vh;
+    font-weight: bold;
+    font-size: 7vmin;
+}
+
+#sucess-counter{
+    display: none;
+    position: absolute;
+    top: 34vh;
+    left: 17vw;
+    font-size: 4vmin;
+}
+
+#quiz-again{    
+    display: none;
+    top: 60vh;
+    left: 51vw;
+}
+
+#done-lomda{
+    display: none;
+    top: 60vh;
+    left: 10vw;
 }
 
